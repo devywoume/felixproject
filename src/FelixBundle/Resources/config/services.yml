@@ -1,0 +1,4 @@
+services:
+#    felix.example:
+#        class: FelixBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

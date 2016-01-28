@@ -1,0 +1,20 @@
+{% extends "::base.html.twig" %}
+
+{% block title %} {{ parent() }} {% endblock %}
+
+{% block body %}
+    <div class="container">
+        {% include 'ProductBundle:Menu:menu.html.twig' %}
+        <h1 class="col-lg-4">Ajouter Catégory</h1>
+        <table class="table">
+            <tr>
+                <td>
+                    {{ form_start(form) }}
+                        {{ form_widget(form.category) }}
+                    <input type="submit" value="Envoyer" >
+                    {{ form_end(form) }}
+                </td>
+            </tr>
+        </table>
+    </div>
+{% endblock %}

@@ -1,0 +1,41 @@
+index_product:
+    path:     /
+    defaults: { _controller: ProductBundle:Product:index }
+add_product:
+    path:     /add
+    defaults: { _controller: ProductBundle:Product:add }
+detailsproduct:
+    path:     /details/{id}
+    defaults: { _controller: ProductBundle:Product:details }
+deleteproduct:
+    path:     /delete/{id}
+    defaults: { _controller: ProductBundle:Product:delete }
+deleteproduct:
+    path:     /product/add
+    defaults: { _controller: ProductBundle:Product:add }
+#unite
+indexunite:
+    path:     /unite
+    defaults: { _controller: ProductBundle:Unite:index }
+addunite:
+    path:     /unite/add
+    defaults: { _controller: ProductBundle:Unite:add }
+deleteunite:
+    path:     /unite/delete/{id}
+    defaults: { _controller: ProductBundle:Unite:delete }
+detailseunite:
+    path:     /unite/details/{id}
+    defaults: { _controller: ProductBundle:Unite:details }
+#category
+indexcategory:
+    path:     /category
+    defaults: { _controller: ProductBundle:Category:index }
+detailscategory:
+    path:     /category/details/{id}
+    defaults: { _controller: ProductBundle:Category:details }
+addcategory:
+    path:     /category/add
+    defaults: { _controller: ProductBundle:Category:add }
+deletecategory:
+    path:     /category/delete/{id}
+    defaults: { _controller: ProductBundle:Category:delete }

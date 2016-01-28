@@ -1,0 +1,4 @@
+services:
+#    signup.example:
+#        class: SignupBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

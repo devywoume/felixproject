@@ -1,0 +1,3 @@
+indexhome:
+    path:     /
+    defaults: { _controller: FrontHomeBundle:Home:index }

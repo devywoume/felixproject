@@ -1,0 +1,31 @@
+{% extends '::base.html.twig' %}
+
+{%  block body %}
+    <div class="container">
+    <div class="col-lg-3">
+
+    </div>
+    <div class="col-lg-9">
+        {% for row in entity %}
+            {{ row.firstname }}<br />
+            <div class="liste">
+                 <table class="details-panier">
+                    <tr>
+                        <th>ID</th>
+                        <th>Produit</th>
+                        <th>Quantité</th>
+                    </tr>
+                    {% for rr in row.lignespanier %}
+                        <tr>
+                                    <td >{{ rr.id }}</td>
+                                    <td> {{ rr.produit }}</td>
+                                    <td>{{ rr.quantite }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        {% endfor %}
+
+    </div>
+    </div>
+{% endblock %}

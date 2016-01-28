@@ -1,0 +1,20 @@
+signup_homepage:
+    path:     /
+    defaults: { _controller: SignupBundle:Default:index }
+
+register:
+    path:     /register
+    defaults: { _controller: SignupBundle:Register:register }
+
+unregister:
+    path:     /unregister
+    defaults: { _controller: SignupBundle:Register:unregister }
+login:
+    path:     /login
+    defaults: { _controller: SignupBundle:Security:login }
+login_check:
+    path: /login_check
+    defaults: { _controller: SignupBundle:Security:loginCheck }
+logout:
+    path: /logout
+    defaults: { _controller: SignupBundle:Security:logout }

@@ -1,0 +1,47 @@
+{% extends '::base.html.twig' %}
+
+{% block title %} {{ parent() }} {% endblock %}
+{% block ariane %} {{ parent() }} {% endblock %}
+
+{% block body %}
+    <div class="container">
+        {% include 'ProductBundle:Menu:menu.html.twig' %}
+        <h1 class="col-lg-9">Ajouter Produit</h1>
+        <div class="product">
+            <div class="col-lg-5">
+                {{ form_start(form) }}
+                    {{ form_widget(form.image) }}
+                    {{ form_errors(form.image) }}
+
+                        {{ form_widget(form.designation) }}
+                        {{ form_errors(form.designation) }}
+
+                    {{ form_widget(form.prixUnitaire) }}
+                    {{ form_errors(form.prixUnitaire) }}
+
+                    {{ form_widget(form.description) }}
+                    {{ form_errors(form.description) }}
+
+                    {{ form_widget(form.category) }}
+                    {{ form_errors(form.category) }}
+
+                    {{ form_widget(form.unite) }}
+                    {{ form_errors(form.unite) }}
+
+                <input id="btn-product" type="submit" value="Envoyer" />
+                {{ form_end(form) }}
+            </div>
+            <div class="col-lg-7">
+                <table class="table">
+                    <tr>
+                        <th> Photo </th>
+                        <th> Désignation </th>
+                        <th> Prix unitaire </th>
+                        <th> Catégories </th>
+                        <th> Unité </th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

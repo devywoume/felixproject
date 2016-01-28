@@ -1,0 +1,35 @@
+
+{% extends "SignupBundle::layout.html.twig" %}
+
+{% block title %}SignupBundle:Register:register{% endblock %}
+
+{% block page %}
+    <div class="container">
+        <div class="container">
+            {# Traduction en internationnale#}
+            <h1>{{ 'register'|trans }}</h1>
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6">
+                <form method="post" action="{{ path('login_check') }}">
+                    <table class="table">
+                        <td>
+                            <input type="text" name="_username" placeholder="Votre Email" />
+
+                        </td>
+                        <td>
+                            <input type="text" name="_password" placeholder="Votre mot de passe" />
+
+                        </td>
+                        <td>
+                            <input type="submit" value="Login" />
+                        </td>
+                    </table>
+                </form>
+
+            </div>
+
+            <div class="col-lg-3"></div>
+        </div>
+    </div>
+
+{% endblock %}

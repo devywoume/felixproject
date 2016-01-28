@@ -1,0 +1,20 @@
+{% extends "::base.html.twig" %}
+
+{% block title %} {{ parent() }} {% endblock %}
+
+{% block body %}
+<div class="container">
+    {% include 'ProductBundle:Menu:menu.html.twig' %}
+    <h1 class="col-lg-4">Détails d'une catégorie</h1>
+    <table class="table">
+        <tr>
+            <td>
+                {{ entity.id }}
+            </td>
+            <td>
+                {{ entity.category }}
+            </td>
+        </tr>
+    </table>
+</div>
+{% endblock %}

@@ -1,0 +1,6 @@
+felix_homepage:
+    path:     /
+    defaults: { _controller: FelixBundle:Default:index }
+felix_listpage:
+    path:     /list
+    defaults: { _controller: FelixBundle:Default:list }

@@ -1,0 +1,24 @@
+front_home:
+    resource: "@FrontHomeBundle/Resources/config/routing.yml"
+    prefix:   /
+
+service:
+    resource: "@ServiceBundle/Resources/config/routing.yml"
+    prefix:   /services
+
+signup:
+    resource: "@SignupBundle/Resources/config/routing.yml"
+    prefix:   /signup
+
+felix:
+    resource: "@FelixBundle/Resources/config/routing.yml"
+    prefix:   /felix
+
+product:
+    resource: "@ProductBundle/Resources/config/routing.yml"
+    prefix:   /product
+
+db:
+    resource: "@DBBundle/Resources/config/routing.yml"
+    prefix:   /db
+

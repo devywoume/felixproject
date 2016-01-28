@@ -1,0 +1,18 @@
+<div class="col-lg-2">
+    <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Menu
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a href="{{ path('add_product') }}">Ajouter un produit</a></li>
+            <li><a href="{{ path('index_product') }}">Lister les produit</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="{{ path('addcategory') }}">Ajouter une catégorie</a></li>
+            <li><a href="{{ path('indexcategory') }}">Lister les catégories</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="{{ path('addunite') }}">Ajouter une unite</a></li>
+            <li><a href="{{ path('indexunite') }}">Lister les unites</a></li>
+        </ul>
+    </div>
+</div>

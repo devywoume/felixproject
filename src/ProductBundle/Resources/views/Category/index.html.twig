@@ -1,0 +1,39 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}ProductBundle:Category:index{% endblock %}
+
+{% block body %}
+    <div class="container">
+        {% include 'ProductBundle:Menu:menu.html.twig' %}
+        <h1 class="col-lg-4">Liste catégory</h1>
+
+        <table class="table">
+            <tr>
+                <td>
+                    ID
+                </td>
+                <td>
+                    Catégory
+                </td>
+                <td>
+                    Actions
+                </td>
+            </tr>
+            {% for row in entities %}
+                <tr>
+                    <td>
+                        {{ row.id }}
+                    </td>
+                    <td>
+                        {{ row.category }}
+                    </td>
+                    <td>
+                        <a href="{{ path('detailscategory',{'id': row.id }) }}"> <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+                        <a href="{{ path('deletecategory',{'id': row.id }) }}"> <span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+{% endblock %}

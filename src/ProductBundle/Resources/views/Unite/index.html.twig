@@ -1,0 +1,43 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}ProductBundle:Unite:index{% endblock %}
+
+{% block body %}
+    <div class="container">
+        {% include 'ProductBundle:Menu:menu.html.twig' %}
+        <h1 class="col-lg-7">Ajouter Produit</h1>
+        <div class="col-lg-12">
+        <table class="table">
+            <tr>
+                <th>
+                    ID
+                </th>
+                <th>
+                    Unité
+                </th>
+                <th>
+                    Actions
+                </th>
+            </tr>
+            {%  for row in entities %}
+                <tr>
+                    <td>
+                        {{ row.id }}
+                    </td>
+                    <td>
+                        {{ row.unite }}
+                    </td>
+                    <td>
+                        <a href="{{ path('detailseunite',{'id': row.id }) }}"> <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+                        <a href="{{ path('deleteunite',{'id': row.id }) }}"> <span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+        </div>
+    </div>
+
+
+
+{% endblock %}
+
